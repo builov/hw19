@@ -1,0 +1,19 @@
+{
+    "name": "builov/hw19",
+    "description": "hw19",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Builov\\Hw19\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitriy",
+            "email": "builov@inbox.ru"
+        }
+    ],
+    "require": {
+      "ext-mbstring": "*"
+    }
+}
