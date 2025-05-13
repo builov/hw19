@@ -8,11 +8,11 @@ use App\Domain\ValueObject\NewsUrl;
 class News
 {
     private ?int $id = null;
-    private ?\DateTime $date = null;
 
     public function __construct(
         private NewsUrl  $url,
         private NewsTitle $title,
+        private \DateTime $date,
     )
     {
     }
