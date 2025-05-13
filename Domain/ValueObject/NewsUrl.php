@@ -8,7 +8,7 @@ class NewsUrl
 
     public function __construct(string $url)
     {
-//        $this->assertExists($url);
+        $this->assertExists($url);
         $this->value = $url;
     }
 
