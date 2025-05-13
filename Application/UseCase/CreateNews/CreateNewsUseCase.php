@@ -26,6 +26,7 @@ class CreateNewsUseCase
         // Вернуть результат
         return new CreateNewsResponse(
             $news->getId(),
+            $news->getDate(),
         );
 
     }

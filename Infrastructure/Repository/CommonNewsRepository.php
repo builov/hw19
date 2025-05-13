@@ -4,6 +4,7 @@ namespace App\Infrastructure\Repository;
 
 use App\Domain\Entity\News;
 use App\Domain\Repository\NewsRepositoryInterface;
+use DateTimeZone;
 
 class CommonNewsRepository implements NewsRepositoryInterface
 {
@@ -19,6 +20,10 @@ class CommonNewsRepository implements NewsRepositoryInterface
 
     public function save(News $news): void
     {
+        $reflectionProperty = new \ReflectionProperty(News::class, 'date');
+        $reflectionProperty->setAccessible(true);
+        $reflectionProperty->setValue($news, new \DateTime('now', new DateTimeZone('Europe/Moscow')));
+
         // Имитация сохранения в БД с присваиванием ID
         $reflectionProperty = new \ReflectionProperty(News::class, 'id');
         $reflectionProperty->setAccessible(true);

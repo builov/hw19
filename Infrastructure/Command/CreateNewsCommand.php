@@ -41,7 +41,7 @@ class CreateNewsCommand extends Command
 
             $createNewsResponse = ($this->useCase)($createNewsRequest);
 
-            $output->writeln('Новость: ' . $createNewsRequest->title);
+            $output->writeln('Новость №: ' . $createNewsResponse->id);
             return Command::SUCCESS;
         } catch (\Throwable $e) {
             $output->writeln($e->getMessage());
